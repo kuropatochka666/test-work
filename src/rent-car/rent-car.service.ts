@@ -33,13 +33,13 @@ export class RentCarService {
 
     const days = moment.duration(end.diff(start)).asDays() + 1;
 
-    const basePrice = await this.databaseService
+    const basePrice = (await this.databaseService
       .executeQuery(
         `SELECT price
          FROM prices
          WHERE alias = 'base'`
-      )
-      .then(e => e[0].price);
+      ))[0].price
+
 
     const tariffs = await this.databaseService.executeQuery(`SELECT *
                                                              FROM tariffs`);

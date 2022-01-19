@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsDateString, IsNotEmpty, IsNumber, IsString, Validate } from "class-validator";
-import { DateValidation } from "../../helpers/date-validation";
-import { CheckMaxDate } from "../../helpers/check-max-date";
+import { DateValidation } from "../../validators/date-validation";
+import { CheckMaxDate } from "../../validators/check-max-date";
 
 
 export class RentDto {
