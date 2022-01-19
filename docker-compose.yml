@@ -1,13 +1,13 @@
 version: '3.0'
 services:
-#  rent-car:
-#    build: .
-#    ports:
-#      - 3000:3000
-#    volumes:
-#      - ./.env:/opt/app/.env
-#    depends_on:
-#      - postgres
+  rent-car:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./.env:/opt/app/.env
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres
